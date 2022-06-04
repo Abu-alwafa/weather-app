@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
   weatherData?: WeatherData
-  cityName: string = 'istanbul'
+  cityName: string = localStorage.getItem('city') || 'istanbul'
 
   server_base = environment.server_base
   server_base_raw = environment.server_base_raw
@@ -33,6 +33,7 @@ export class AppComponent {
   }
   handleSubmit() {
     this.getWeather(this.cityName)
+    localStorage.setItem('city', this.cityName)
     this.cityName = ''
   }
 }
