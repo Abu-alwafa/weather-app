@@ -1,0 +1,117 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+
+  .container {
+    width: 100%;
+    max-width: 360px;
+    height: 100%;
+    max-height: 800px;
+    background: var(--blue-2);
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px var(--shadow-dark);
+
+    .upper-data {
+      width: 100%;
+      height: 50%;
+      position: relative;
+      // border-radius: 50px 50px 0 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(60%);
+        border-radius: 20px 20px 0 0;
+      }
+
+      .weather-data {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+
+        .location {
+          font-size: 1.5em;
+          font-weight: normal;
+        }
+
+        .teperature {
+          font-size: 4em;
+        }
+      }
+    }
+
+    .lower-data {
+      color: var(--white);
+      height: 50%;
+
+      .more-info-container {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 1em;
+
+        .search {
+          margin-bottom: 2px;
+
+          input {
+            background: var(--shadow-light);
+            border: none;
+            outline: none;
+            border-radius: 20px 20px 0 0;
+            padding: 1em;
+            color: var(--gray-1);
+            text-align: center;
+            font-size: .8em;
+          }
+
+          ::placeholder {
+            color: rgb(167, 167, 167);
+            ;
+          }
+        }
+
+        .info-blocks {
+          height: 80%;
+          border-radius: 0 20px 20px 20px;
+          background: var(--shadow-light);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          .info-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .info-block-label {
+
+              span {
+                font-size: 10px;
+              }
+
+              img {
+                width: 20px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .mat-input-element::placeholder {
+  color: rgb(167, 167, 167);
+}
