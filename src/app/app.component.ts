@@ -1,6 +1,7 @@
 import { WeatherData } from './models/weather.model';
 import { Component } from '@angular/core';
 import { WeatherService } from './services/weather.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,9 @@ import { WeatherService } from './services/weather.service';
 export class AppComponent {
   weatherData?: WeatherData
   cityName: string = 'istanbul'
+
+  server_base = environment.server_base
+  server_base_raw = environment.server_base_raw
   constructor(private weather: WeatherService) { }
   ngOnInit(): void {
 

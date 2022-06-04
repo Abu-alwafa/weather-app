@@ -4,5 +4,7 @@ export const environment = {
   host_name: 'X-RapidAPI-Host',
   host_value: 'community-open-weather-map.p.rapidapi.com',
   api_key_name: 'X-RapidAPI-Key',
-  api_key_value: '9fcbf6f3d9msh9d10bdc9ae9ad83p11b780jsne619d647277e'
+  api_key_value: '9fcbf6f3d9msh9d10bdc9ae9ad83p11b780jsne619d647277e',
+  server_base: 'https://github.com/Abu-alwafa/weather-app/blob/main/docs',
+  server_base_raw: '?raw=true'
 };
